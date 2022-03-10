@@ -19,18 +19,22 @@
 # Build settings that are NOT module paths should appear in a
 # CONFIG_SITE file.
 
-TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+#TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 # Define SUPPORT macro - used for relative paths
-SUPPORT=/usr/lib/epics
+SUPPORT=/epics/utils/rhel8-epics-config/BUILD/support
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-SNCSEQ=/usr/lib/epics
-ASYN=/usr/lib/epics
-MOTOR=/usr/lib/epics
-CALC=/usr/lib/epics
-STREAM=/usr/lib/epics
-EPICS_BASE=/usr/lib/epics
+AUTOSAVE=$(SUPPORT)/autosave
+BUSY=$(SUPPORT)/busy
+TPMAC=$(SUPPORT)/tpmac
+DEVIOCSTATS=$(SUPPORT)/iocStats
+SNCSEQ=$(SUPPORT)/seq
+ASYN=$(SUPPORT)/asyn
+MOTOR=$(SUPPORT)/motor
+CALC=$(SUPPORT)/calc
+STREAM=$(SUPPORT)/stream
+EPICS_BASE=/epics/utils/rhel8-epics-config/BUILD/base
 
 
 
