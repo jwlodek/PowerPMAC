@@ -1,0 +1,36 @@
+record(motor,"$(P)Mtr")
+{
+	field(DESC,"$(DESC)")
+	field(DTYP,"$(DTYP=asynMotor)")
+	field(DIR,"$(DIR=0)")
+	field(VELO,"$(VELO)")
+	field(VBAS,"$(VBAS)")
+	field(ACCL,"$(ACCL)")
+	field(BDST,"$(BDST)")
+	field(BVEL,"$(BVEL)")
+	field(BACC,"$(BACC)")
+	field(OUT,"@asyn($(PORT),$(ADDR))")
+	field(MRES,"$(MRES)")
+	field(PREC,"$(PREC)")
+	field(EGU,"$(EGU)")
+	field(DHLM,"$(DHLM)")
+	field(DLLM,"$(DLLM)")
+	field(INIT,"$(INIT=0)")
+	field(RTRY,"$(RTRY=0)")
+	field(RDBD,"$(RDBD)")
+	field(UEIP,"$(UEIP=1)")
+	field(VMAX,"$(VMAX=0)")
+	field(TWV,"1")
+
+    info(autosaveFields_pass0, "DVAL DIR DHLM DLLM TWV SREV MRES ERES RRES VBAS VELO VMAX ACCL BDST BVEL BACC RDBD DESC EGU RTRY UEIP URIP DLY RDBL PREC DISA DISP FOFF OFF FRAC OMSL JVEL JAR PCOF ICOF DCOF HVEL NTM NTMF")
+    info(autosaveFields_pass1, "DIR DHLM DLLM TWV SREV MRES ERES RRES VBAS VELO VMAX ACCL BDST BVEL BACC RDBD DESC EGU RTRY UEIP URIP DLY RDBL PREC DISA DISP FOFF OFF FRAC OMSL JVEL JAR PCOF ICOF DCOF HVEL NTM NTMF")
+}
+
+
+# define a kill record
+record(ao, "$(P)Cmd:Kill-Cmd") {
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),$(ADDR))PMAC_C_KILL_AXIS")
+  field(VAL, "0")
+}
+
