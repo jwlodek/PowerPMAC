@@ -21,20 +21,18 @@
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-# If using the sequencer, point SNCSEQ at its top directory:
-#SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
+# Define SUPPORT macro - used for relative paths
+SUPPORT=/usr/lib/epics
 
 # EPICS_BASE usually appears last so other apps can override stuff:
+SNCSEQ=/usr/lib/epics
 ASYN=/usr/lib/epics
 MOTOR=/usr/lib/epics
+CALC=/usr/lib/epics
+STREAM=/usr/lib/epics
 EPICS_BASE=/usr/lib/epics
 
-## SUPPORT=/epics/base/3.14.12.4/support
-## ASYN=$(SUPPORT)/asyn/4-26
-## MOTOR=$(SUPPORT)/motor/6-9
-## CALC=$(SUPPORT)/calc/3-4-2
-## STREAM=$(SUPPORT)/stream/2-6
-## EPICS_BASE=$(SUPPORT)/../
+
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
